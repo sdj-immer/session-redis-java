@@ -15,6 +15,7 @@ public class DefaultSessionRepositoryFactory implements SessionRepositoryFactory
         repository = new RedisSessionRepository(new JedisPool(new JedisPoolConfig(), "redis.host.name"));
     }
 
+    @Override
     public SessionRepository getSessionRepository() {
         return repository;
     }
