@@ -1,5 +1,6 @@
-package com.richinfo.session;
+package cn.immer.session.redis;
 
+import cn.immer.session.SessionRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import redis.clients.jedis.Jedis;
@@ -21,7 +22,6 @@ public class RedisSessionRepository implements SessionRepository {
     private int timeout = (int) TimeUnit.DAYS.toSeconds(10);
 
     private String prefix = "sessions:";
-
     private JedisPool pool;
 
     public RedisSessionRepository(JedisPool pool) {

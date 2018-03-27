@@ -1,4 +1,4 @@
-package com.richinfo.session;
+package cn.immer.session;
 
 /**
  * session repository factory.

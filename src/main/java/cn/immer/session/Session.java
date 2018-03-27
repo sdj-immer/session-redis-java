@@ -1,4 +1,4 @@
-package com.richinfo.session;
+package cn.immer.session;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;

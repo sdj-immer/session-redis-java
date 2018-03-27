@@ -1,5 +1,6 @@
-package com.richinfo.session;
+package cn.immer.session;
 
+import cn.immer.session.redis.RedisSessionRepository;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 

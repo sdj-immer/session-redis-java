@@ -343,22 +343,6 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
         return result.toString();
     }
 
-    /**
-     * 手机号验证
-     *
-     * @param mobile
-     * @return 验证通过返回true
-     */
-    public static boolean isMobile(String mobile) {
-        Pattern p = null;
-        Matcher m = null;
-        boolean b = false;
-        p = Pattern.compile("^1[0-9]{10}$"); // 验证手机号
-        m = p.matcher(mobile);
-        b = m.matches();
-        return b;
-    }
-
     /* 短信验证码校验*/
     static  Pattern smspattern = Pattern.compile("^[0-9]{6}$"); // 验证手机号
     public static boolean isSmsCode(String code){

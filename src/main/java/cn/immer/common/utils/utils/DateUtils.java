@@ -113,46 +113,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 		}
 	}
 
-	/**
-	 * 获取过去的天数
-	 * @param date
-	 * @return
-	 */
-	public static long pastDays(Date date) {
-		long t = new Date().getTime()-date.getTime();
-		return t/(24*60*60*1000);
-	}
 
-	/**
-	 * 获取未来的小时内时间戳
-	 * @param hours 距现在到未来几天的时间戳
-	 * @return
-	 */
-	public static long getFutureHoursTimestamp(int hours) {
-		return new Date().getTime()+(hours*60*60*1000);
-	}
-
-
-	/**
-	 * 获取过去的小时
-	 * @param date
-	 * @return
-	 */
-	public static long pastHour(Date date) {
-		long t = new Date().getTime()-date.getTime();
-		return t/(60*60*1000);
-	}
-	
-	/**
-	 * 获取过去的分钟
-	 * @param date
-	 * @return
-	 */
-	public static long pastMinutes(Date date) {
-		long t = new Date().getTime()-date.getTime();
-		return t/(60*1000);
-	}
-	
 	public static Date pastDateTime(long timeMillis){
 		return new Date(timeMillis);
 	}
@@ -183,16 +144,5 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 		long afterTime = after.getTime();
 		return (afterTime - beforeTime) / (1000 * 60 * 60 * 24);
 	}
-	
-	/**
-	 * @param args
-	 * @throws ParseException
-	 */
-	public static void main(String[] args) throws ParseException {
-//		System.out.println(formatDate(parseDate("2010/3/6")));
-//		System.out.println(getDate("yyyy年MM月dd日 E"));
-	//	long time = new Date().getTime()-parseDate("2012-11-19").getTime();
-/*		System.out.println(formatDateTime(time));
-		System.out.println(time/(24*60*60*1000));*/
-	}
+
 }
